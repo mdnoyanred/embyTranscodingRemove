@@ -81,7 +81,7 @@ sshpass -p "${PASSWORD}" ssh -o ConnectTimeout=1 -o StrictHostKeyChecking=no -q 
         reqInfo() {
             code_Avlb="\${1}"
             if [[ ! -d "\${LOCATION}" ]] && [[ "\${code_Avlb}" -ne 0 ]] ; then
-                printf "\n\e[1;31m%s\e[0m" "ERROR - Emby server package is not installed in given host."
+                printf "\n\e[1;31m%s\n\e[0m" "ERROR - Emby server package is not installed in given host."
                 exit
             fi
         }
